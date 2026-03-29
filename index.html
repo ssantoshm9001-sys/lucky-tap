@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lucky Tap by Aryan</title>
+  <style>
+    body {
+      background: black;
+      color: white;
+      text-align: center;
+      font-family: Arial;
+    }
+    button {
+      background: green;
+      color: white;
+      padding: 20px;
+      font-size: 20px;
+      border: none;
+      margin-top: 100px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Lucky Tap 🎮</h1>
+
+<button onclick="play()">Tap Your Luck</button>
+
+<h2 id="result"></h2>
+
+<p style="margin-top:100px; color:gray;">
+  Made by Aryan
+</p>
+
+<script>
+function play(){
+  let num = Math.floor(Math.random()*100)+1;
+  let msg = "";
+
+  if(num<=30) msg="😢 Bad Luck";
+  else if(num<=70) msg="😐 Normal";
+  else msg="🎉 Jackpot";
+
+  document.getElementById("result").innerText = num + " - " + msg;
+}
+</script>
+
+</body>
+</html>
